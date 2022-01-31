@@ -1,0 +1,10 @@
+server:
+  port: 9091
+
+spring:
+  data:
+    cassandra:
+      contact-points:
+        - 127.0.0.1
+      keyspace-name: test_ks
+      port: 9042
