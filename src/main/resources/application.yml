@@ -4,7 +4,6 @@ server:
 spring:
   data:
     cassandra:
-      contact-points:
-        - 127.0.0.1
+      contact-points: 0.0.0.0
       keyspace-name: test_ks
       port: 9042
