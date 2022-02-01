@@ -1,9 +1,11 @@
 package com.scode.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.cassandra.config.AbstractCassandraConfiguration;
 
+@Slf4j
 @Configuration
 public class CassandraConfig extends AbstractCassandraConfiguration {
 
@@ -19,19 +21,19 @@ public class CassandraConfig extends AbstractCassandraConfiguration {
 
     @Override
     protected String getKeyspaceName() {
-        System.out.println("keySpace: " + keySpace);
+        log.info("keySpace: " + keySpace);
         return keySpace;
     }
 
     @Override
     protected String getContactPoints() {
-        System.out.println("contactPoints: " + contactPoints);
+        log.info("contactPoints: " + contactPoints);
         return contactPoints;
     }
 
     @Override
     protected int getPort() {
-        System.out.println("contactPoints: " + contactPoints);
+        log.info("contactPoints: " + contactPoints);
         return port;
     }
 }
