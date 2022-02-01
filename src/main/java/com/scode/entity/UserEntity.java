@@ -1,16 +1,20 @@
 package com.scode.entity;
 
-import lombok.Data;
+import lombok.*;
 import org.springframework.data.cassandra.core.mapping.Column;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
+
 @Table("user_data")
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserEntity {
-    @Column
-    @PrimaryKey
+
+    @PrimaryKey("user_id")
     private Integer userId;
-    @Column
+    @Column("user_name")
     private String userName;
 }
