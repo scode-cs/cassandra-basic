@@ -2,8 +2,18 @@ server:
   port: 9091
 
 spring:
+  application:
+    name: cassandra-api
+
   data:
     cassandra:
       contact-points: 0.0.0.0
       keyspace-name: test_ks
       port: 9042
+
+
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  show-actuator: true
